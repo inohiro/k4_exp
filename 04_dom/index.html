@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>JavaScript Sample</title>
+    <script type="text/javascript" src="script.js" />
+    <script type="text/javascript">
+      <!--
+	  window.onload = function() { alert( "Hello" ); }
+	  window.onload = function() { transform( "schedule.xml", "list.xsl", "XML" ); }
+	  window.onload = function() { transform( 'schedule.xml', 'table.xsl', 'XML' ); }
+	-->
+				      </script>
+  </head>
+  <body>
+    <input type="button" value="say_hello" onclick="say( 'Hello' )" >
+    <hr />
+    <h2>新規/更新</h2>
+    <form name="addForm">
+      <label>カテゴリ:</label>
+      <input type="radio" name="category" value="Meeting">会議
+      <input type="radio" name="category" value="Lecture">授業
+      <input type="radio" name="category" value="Private">個人
+      <input type="radio" name="category" value="PartTimeJob">バイト
+      <input type="radio" name="category" value="Guidance">説明会
+      <br />
+      <label>ID:</label><input type="text" name="id" size="2"><br />
+      <label>タイトル:</label><input type="text" name="title" size="30"><br />
+      <label>概要:</label><input type="text" name="description" size="100"><br />
+      <label>場所:</label><input type="text" name="coverage" size="30"><br />
+      <label>日付:</label><input type="text" name="date" size="30"><br />
+      <label>時間:</label><input type="text" name="time" size="30"><br />
+      <label>備考:</label><input type="text" name="comment" size="100"><br />
+      <input type="button" onclick="add( 'schedule_utf.xml', 'table.xsl', 'XML' )" value=" 追 加 （テーブル表示）">
+      <input type="button" onclick="add( 'schedule_utf.xml', 'list.xsl', 'XML' )" value=" 追 加 （リスト表示）">
+    </form>
+    
+    <hr />
+    <h2>削除</h2>
+    <form name="removeForm">
+      <label>ID:</label>
+      <input type="text" name="id" size="2">
+      <input type="button" onclick="remove( 'schedule_utf.xml', 'table.xsl', 'XML' )" value=" 削 除 （テーブル表示）">
+      <input type="button" onclick="remove( 'schedule_utf.xml', 'list.xsl', 'XML' )" value=" 削 除 （リスト表示）">
+    </form>
+    
+    <hr />
+    <button onclick="transform('schedule_utf.xml', 'table.xsl', 'XML')">Table View</button>
+    <button onclick="transform('schedule_utf.xml', 'list.xsl', 'XML')">List View</button>
+    <div id="XML"></div>
+  </body>
+</html>
