@@ -1,14 +1,44 @@
+div {
+    /*width: 1024;*/
+    margin: 0 0 1px 1px;
+    padding: 10px 15px 10px 15px;
+}
+  
+a {
+    font-weight: bold;
+    color: #4682b4;
+}
+
+bc.a {
+    color: red;
+}
 
 div.odd {
-  background: #CDF2CE;
+    background: #f5fffa;
+/* background: #CDF2CE; */
 }
 
 div.even {
-  background: #E5F2E5;
+    background: #fdf5e6;
+/* background: #E5F2E5; */
 }
 
-/*ul.list132 li {
+li.bc_even {
+    background: #dda0dd;
+}
+
+li.bc_odd {
+    background: #66cdaa;
+}
+
+div.b_comment {
+    //    background: white;
+}
+
+/*
+ul.list132 li {
   margin: 0 0 1px 15px;
   padding: 10px 15px 10px 29px;
   list-style: none;
-}*/
+}
+*/
